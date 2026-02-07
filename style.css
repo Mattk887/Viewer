@@ -1,0 +1,108 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Landing Page */
+body.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f2f2f2;
+}
+
+#login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 300px;
+}
+
+#login-box h1 {
+  margin-top: 0;
+}
+
+#login-box input {
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#login-box button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  width: 100%;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#login-box button:hover {
+  background: #005fcc;
+}
+
+#error-msg {
+  color: red;
+  margin-top: 10px;
+  min-height: 18px;
+}
+
+/* Map Viewer */
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Left Panel */
+#left-panel {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 220px;
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+#left-panel h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+#left-panel label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+/* Basemap Switcher */
+#basemap-switcher {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+#basemap-switcher select {
+  padding: 4px 6px;
+  font-size: 14px;
+}

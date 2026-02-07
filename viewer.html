@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Queensland Map Viewer</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Left Panel -->
+  <div id="left-panel">
+    <h2>Layers</h2>
+
+    <label><input type="checkbox" id="culverts-toggle" checked> Culverts</label>
+    <label><input type="checkbox" id="bridges-toggle" checked> Bridges</label>
+    <label><input type="checkbox" id="property-toggle" checked> Property Boundaries</label>
+    <label><input type="checkbox" id="rail-toggle" checked> Railway Tracks</label>
+  </div>
+
+  <!-- Basemap Switcher -->
+  <div id="basemap-switcher">
+    <select id="basemap-select">
+      <option value="streets">Streets</option>
+      <option value="satellite">Satellite</option>
+      <option value="hybrid" selected>Hybrid</option>
+      <option value="terrain">Terrain</option>
+    </select>
+  </div>
+
+  <!-- Map -->
+  <div id="map"></div>
+
+  <!-- MapLibre -->
+  <script src="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.js"></script>
+
+  <!-- ESRI JSON → GeoJSON converter -->
+  <script src="https://unpkg.com/terraformer@1.0.12"></script>
+  <script src="https://unpkg.com/terraformer-arcgis-parser@1.0.5"></script>
+
+  <!-- Main script -->
+  <script src="script.js"></script>
+</body>
+</html>

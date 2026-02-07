@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Access Portal</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body class="landing">
+
+  <div id="login-box">
+    <h1>Enter Access Code</h1>
+    <input type="password" id="access-input" placeholder="Enter code..." />
+    <button id="access-btn">Enter</button>
+    <p id="error-msg"></p>
+  </div>
+
+  <script>
+    document.getElementById("access-btn").addEventListener("click", () => {
+      const code = document.getElementById("access-input").value.trim();
+
+      if (code.toLowerCase() === "visioneer") {
+        window.location.href = "viewer.html";
+      } else {
+        document.getElementById("error-msg").textContent = "Incorrect code";
+      }
+    });
+
+    document.getElementById("access-input").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        document.getElementById("access-btn").click();
+      }
+    });
+  </script>
+
+</body>
+</html>
